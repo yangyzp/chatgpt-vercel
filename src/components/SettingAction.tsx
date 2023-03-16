@@ -3,7 +3,6 @@ import { toJpeg } from "html-to-image"
 import { copyToClipboard, dateFormat } from "~/utils"
 import type { ChatMessage } from "~/types"
 import type { Setting } from "~/system"
-
 export default function SettingAction(props: {
   setting: Accessor<Setting>
   setSetting: Setter<Setting>
@@ -157,7 +156,6 @@ function SettingItem(props: {
     </div>
   )
 }
-
 function ActionItem(props: { onClick: any; icon: string; label?: string }) {
   return (
     <div
@@ -168,7 +166,6 @@ function ActionItem(props: { onClick: any; icon: string; label?: string }) {
     </div>
   )
 }
-
 function exportJpg() {
   toJpeg(document.querySelector("#message-container") as HTMLElement, {}).then(
     url => {
